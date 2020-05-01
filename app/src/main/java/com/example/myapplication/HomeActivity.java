@@ -49,7 +49,7 @@ public class HomeActivity extends AppCompatActivity {
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.homeLL);
         StringBuffer sb = new StringBuffer();
         int counter = 1;
-        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy hh:mm:ssz");
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss");
         for (Note note : noteList) {
             sb.append(counter + ", ");
             TextView noteView = new TextView(this);
@@ -77,9 +77,6 @@ public class HomeActivity extends AppCompatActivity {
             sb.delete(0, sb.length());
             counter++;
         }
-
-
-
     }
 
     private class GetUrlContentTask extends AsyncTask<String, Integer, String> {
